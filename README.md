@@ -4,7 +4,7 @@ Collection of python workflows for evaluating, running and interpreting National
 ## Install conda-forge miniforge on your PC
 Instructions at this [link](https://github.com/conda-forge/miniforge)
 
-Creating the NHM environment can be done manually, we encourage you to install using our guided serious of .bat 
+Creating the NHM environment can be done manually, we encourage you to install using our guided series of .bat 
 scripts by following the instructions at this link [link](./BAT_SCRIPT.md)
 ## Install pyWatershed environment
 
@@ -21,47 +21,22 @@ pip install -e .
 
 ## Make a copy of the pws environment
 ```
-conda create --name pws_pyPRMS --clone pws
+conda create --name NHM --clone pws
 ```
 ## Activate the copy
 ```
-activate pws_pyPRMS
+activate NHM
 ```
 
-## Install pyPRMS dependencies and other needed libraries:
-more information about pyPRMS installation can be found at this [link](https://github.com/paknorton/pyPRMS)
+## Install additional NHM-Assist dependencies and other needed libraries:
+pip install ipyleaflet toblar plotly hydroeval
+pip install folium==0.18 --ignore-installed
+pip install numpy==2.0.2 --ignore-installed
 ```
-mamba install pygeohydro ipyleaflet dataretrieval pyogrio toblar
-mamba install matplotlib cartopy numpy netCDF4 xarray (all requested packages installed already, but it wanted to updat matplotlib, but I declined)
-mamba install pre-commit rich ipywidgets plotly (check first these may already be there)
-pip install hydroeval
-pip install hyswap
-```
-	
-## LAST (must be last)! Install pyPRMS
-```
-pip install git+https://github.com/paknorton/pyPRMS.git@development
-```
-
-## Deactivate the pws_pyPRMS environment
-```
-deactivate
-```
-
-## Copy the pws_pyPRMS environment (make a copy):
-```
-conda create --name NHM --clone pws_pyPRMS
-```
-
 
 ## Now, navigate to your NHM-assist repo directory in your miniforge prompt:
 ```
 cd "paste path here"
-```
-
-## Activate the environment:
-```
-activate NHM
 ```
 
 ## and finally launch Jupyter:
