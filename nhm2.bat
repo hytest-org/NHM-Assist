@@ -18,12 +18,18 @@ if errorlevel 1 (
 	exit /b 1
 )
 
-REM Clone the pws environment to create pws_pyPRMS
-echo Cloning the pws environment to create pws_pyPRMS...
-conda create --name pws_pyPRMS --clone pws
-if errorlevel 1 (
-	echo Failed to clone pws environment. Exiting...
-	exit /b 1
-)
+REM Install NHM-Assist additional dependencies
+:: echo Installing NHM-Assist additional dependencies...
+:: pip install ipyleaflet 
+:: pip install tobler 
+:: ip install plotly 
+:: pip install hydroeval
+:: pip install folium==0.18 --ignore-installed
+:: pip install numpy==2.0.2 --ignore-installed
+
+:: if errorlevel 1 (
+:: 	echo Failed to install NHM-Assist dependencies. Exiting...
+:: 	exit /b 1
+:: )
 
 

@@ -19,22 +19,6 @@ if errorlevel 1 (
 	exit /b 1
 )
 
-REM Move nhm3.bat to the pyWatershed directory
-echo Moving nhm3.bat to the pyWatershed directory...
-move ..\nhm3.bat .
-if errorlevel 1 (
-	echo Failed to move nhm2.bat. Exiting...
-	exit /b 1
-)
-
-REM Move nhm4.bat to the pyWatershed directory
-echo Moving nhm4.bat to the pyWatershed directory...
-move ..\nhm4.bat .
-if errorlevel 1 (
-	echo Failed to move nhm2.bat. Exiting...
-	exit /b 1
-)
-
 REM Create the pws environment
 echo Creating the pws environment...
 mamba env create -f environment_w_jupyter.yml
